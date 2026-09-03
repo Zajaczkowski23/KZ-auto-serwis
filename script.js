@@ -3,8 +3,13 @@ const mobileMenu = document.querySelector('#mobileMenu');
 menuBtn.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('hidden');
   menuBtn.setAttribute('aria-expanded', String(!open));
+  menuBtn.setAttribute('aria-label', open ? 'Otwórz menu' : 'Zamknij menu');
 });
-mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.setAttribute('aria-label', 'Otwórz menu');
+}));
 
 const range = document.querySelector('#compareRange');
 const afterLayer = document.querySelector('#afterLayer');

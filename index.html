@@ -67,6 +67,7 @@
         </div>
         <button
           id="menuBtn"
+          type="button"
           class="grid h-11 w-11 place-items-center border border-white/40 md:hidden"
           aria-expanded="false"
           aria-controls="mobileMenu"
@@ -317,21 +318,36 @@
             <span class="red-rule"></span>
           </div>
           <div class="grid gap-5 sm:grid-cols-3">
-            <button class="project text-left" data-image="assets/IMG_2534.jpeg" alt="Przycisk ">
+            <button
+              type="button"
+              class="project text-left"
+              data-image="assets/IMG_2534.jpeg"
+              aria-label="Otwórz realizację: Mechanika pojazdowa"
+            >
               <img
                 src="assets/IMG_2534.jpeg"
                 alt="Białe Maserati po serwisie"
                 loading="lazy"
               /><span>Mechanika pojazdowa</span>
             </button>
-            <button class="project text-left" data-image="assets/IMG_3511.jpeg">
+            <button
+              type="button"
+              class="project text-left"
+              data-image="assets/IMG_3511.jpeg"
+              aria-label="Otwórz realizację: Serwis aut premium"
+            >
               <img
                 src="assets/IMG_3511.jpeg"
                 alt="Jaguar przygotowany do jazdy"
                 loading="lazy"
               /><span>Serwis aut premium</span>
             </button>
-            <button class="project text-left" data-image="assets/IMG_3044.jpeg">
+            <button
+              type="button"
+              class="project text-left"
+              data-image="assets/IMG_3044.jpeg"
+              aria-label="Otwórz realizację: Silniki i rozrządy"
+            >
               <img
                 src="assets/IMG_3044.jpeg"
                 alt="Rozrząd silnika"
@@ -360,6 +376,8 @@
 
           <button
             id="contactBtn"
+            type="button"
+            aria-label="Otwórz formularz kontaktowy"
             class="border border-black/50 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
           >
             Skontaktuj się <span class="ml-6 text-signal">→</span>
@@ -396,9 +414,10 @@
       aria-label="Podgląd realizacji"
     >
       <button
+        type="button"
         class="absolute right-6 top-5 text-4xl text-white"
         data-close
-        aria-label="Zamknij"
+        aria-label="Zamknij podgląd realizacji"
       >
         ×</button
       ><img
@@ -417,9 +436,10 @@
     >
       <div class="relative w-full max-w-xl bg-paper p-7 sm:p-10">
         <button
+          type="button"
           class="absolute right-5 top-4 text-3xl"
           data-close
-          aria-label="Zamknij"
+          aria-label="Zamknij formularz kontaktowy"
         >
           ×</button
         ><span class="eyebrow">Kontakt</span>
@@ -443,6 +463,8 @@
             placeholder="Opowiedz krótko, czego potrzebuje Twoje auto"
           ></textarea
           ><button
+            type="submit"
+            aria-label="Wyślij zgłoszenie kontaktowe"
             class="bg-ink px-6 py-4 text-xs font-bold uppercase tracking-[.18em] text-white hover:bg-signal"
           >
             Wyślij zgłoszenie
