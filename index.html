@@ -150,6 +150,7 @@
             <img
               class="h-[350px] w-full object-cover grayscale-[15%] lg:h-[470px]"
               src="assets/IMG_4383.jpeg"
+              loading="lazy"
               alt="Mechanik pracujący przy silniku samochodu"
             />
           </div>
@@ -176,6 +177,7 @@
             class="h-[420px] w-full object-cover opacity-75 lg:h-[530px]"
             src="assets/IMG_3044.jpeg"
             alt="Rozrząd silnika podczas naprawy"
+            loading="lazy"
           />
         </div>
         <div
@@ -216,10 +218,12 @@
               class="h-80 w-full object-cover"
               src="assets/IMG_4348.jpeg"
               alt="Precyzyjna praca przy silniku"
+              loading="lazy"
             /><img
               class="h-80 w-full object-cover"
               src="assets/IMG_3044.jpeg"
               alt="Naprawa rozrządu silnika"
+              loading="lazy"
             />
           </div>
         </div>
@@ -256,6 +260,7 @@
               class="absolute inset-0 h-full w-full object-contain opacity-90"
               src="assets/IMG_2440.jpeg"
               alt="Samochód przed detailingiem"
+              loading="lazy"
             />
             <div
               id="afterLayer"
@@ -265,6 +270,7 @@
                 class="h-full max-w-none shrink-0 object-contain"
                 src="assets/IMG_2441.jpeg"
                 alt="Samochód po detailingu"
+                loading="lazy"
               />
             </div>
             <div class="absolute inset-0 bg-black/25"></div>
@@ -311,22 +317,26 @@
             <span class="red-rule"></span>
           </div>
           <div class="grid gap-5 sm:grid-cols-3">
-            <button class="project text-left" data-image="assets/IMG_2534.jpeg">
+            <button class="project text-left" data-image="assets/IMG_2534.jpeg" alt="Przycisk ">
               <img
                 src="assets/IMG_2534.jpeg"
                 alt="Białe Maserati po serwisie"
+                loading="lazy"
               /><span>Mechanika pojazdowa</span>
             </button>
             <button class="project text-left" data-image="assets/IMG_3511.jpeg">
               <img
                 src="assets/IMG_3511.jpeg"
                 alt="Jaguar przygotowany do jazdy"
+                loading="lazy"
               /><span>Serwis aut premium</span>
             </button>
             <button class="project text-left" data-image="assets/IMG_3044.jpeg">
-              <img src="assets/IMG_3044.jpeg" alt="Rozrząd silnika" /><span
-                >Silniki i rozrządy</span
-              >
+              <img
+                src="assets/IMG_3044.jpeg"
+                alt="Rozrząd silnika"
+                loading="lazy"
+              /><span>Silniki i rozrządy</span>
             </button>
           </div>
         </div>
@@ -347,14 +357,13 @@
           <p class="max-w-xs text-sm leading-6 text-black/70">
             Chętnie poznamy jego historię i podpowiemy najlepsze rozwiązanie.
           </p>
-          <div>
-            <button
-              id="contactBtn"
-              class="border border-black/50 px-8 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
-            >
-              Skontaktuj się <span class="ml-6 text-signal">→</span>
-            </button>
-          </div>
+
+          <button
+            id="contactBtn"
+            class="border border-black/50 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
+          >
+            Skontaktuj się <span class="ml-6 text-signal">→</span>
+          </button>
         </div>
       </section>
     </main>
@@ -371,6 +380,7 @@
             class="brand-logo brand-logo-footer !h-12"
             src="assets/logo.png"
             alt="KZ Autoservis"
+            loading="lazy"
         /></a>
         <p class="text-[10px] uppercase tracking-[.15em] text-white/40">
           © 2026 KZ Autoservis. Wszystkie prawa zastrzeżone.
@@ -395,6 +405,7 @@
         id="lightboxImg"
         class="max-h-[85vh] max-w-[92vw] object-contain"
         alt="Powiększona realizacja"
+        loading="lazy"
       />
     </div>
     <div
