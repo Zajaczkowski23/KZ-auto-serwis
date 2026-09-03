@@ -9,19 +9,7 @@
     />
     <title>KZ Autoservis — mechanika z pasją</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { signal: "#e1262d", ink: "#101112", paper: "#f4f2ee" },
-            fontFamily: {
-              sans: ["Inter", "Arial", "sans-serif"],
-              display: ["Barlow Condensed", "Arial Narrow", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <script src="tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +17,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root { --red: #c71920; }
+      #detailing .eyebrow { color: #f0444b; }
+    </style>
   </head>
   <body class="bg-paper text-ink antialiased">
     <header
@@ -400,7 +392,7 @@
             alt="KZ Autoservis"
             loading="lazy"
         /></a>
-        <p class="text-[10px] uppercase tracking-[.15em] text-white/40">
+        <p class="text-[10px] uppercase tracking-[.15em] text-white/60">
           © 2026 KZ Autoservis. Wszystkie prawa zastrzeżone.
         </p>
       </div>
