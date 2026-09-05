@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="KZ Autoservis — profesjonalna mechanika, diagnostyka i serwis samochodów premium."
+      content="KZ Autoserwis — profesjonalna mechanika, diagnostyka i serwis samochodów premium."
     />
-    <title>KZ Autoservis — mechanika z pasją</title>
+    <title>KZ Autoserwis — mechanika z pasją</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,8 +19,12 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      :root { --red: #c71920; }
-      #detailing .eyebrow { color: #f0444b; }
+      :root {
+        --red: #c71920;
+      }
+      #detailing .eyebrow {
+        color: #f0444b;
+      }
     </style>
   </head>
   <body class="bg-paper text-ink antialiased">
@@ -36,12 +41,12 @@
         <a
           href="#home"
           class="flex items-center"
-          aria-label="KZ Autoservis — strona główna"
+          aria-label="KZ Autoserwis — strona główna"
         >
           <img
             class="brand-logo brand-logo-header !h-10"
             src="assets/logo.png"
-            alt="KZ Autoservis"
+            alt="KZ Autoserwis"
           />
         </a>
         <div
@@ -97,11 +102,24 @@
           <p class="mt-8 max-w-sm text-sm leading-6 text-white/70">
             Precyzyjna mechanika i diagnostyka tworzona z pasji do motoryzacji.
           </p>
+
           <a
-            href="#contact"
-            class="mt-8 inline-flex items-center gap-8 border border-white/60 px-7 py-4 text-[11px] font-bold uppercase tracking-[.18em] transition hover:border-signal hover:bg-signal"
-            >Umów wizytę <span class="text-signal">→</span></a
+            href="https://www.facebook.com/profile.php?id=61590144100994"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Odwiedź KZ Autoserwis na Facebooku (otwiera się w nowej karcie)"
+            class="group mt-3 grid h-10 w-10 place-items-center border border-white/40 transition hover:border-signal hover:bg-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal"
           >
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 fill-white"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44c-.31-.04-1.37-.13-2.61-.13-2.59 0-4.36 1.58-4.36 4.48V9.5H7.1V13h2.93v9h3.47Z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
       <a
@@ -366,14 +384,16 @@
             Chętnie poznamy jego historię i podpowiemy najlepsze rozwiązanie.
           </p>
 
-          <button
-            id="contactBtn"
-            type="button"
-            aria-label="Otwórz formularz kontaktowy"
-            class="border border-black/50 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
-          >
-            Skontaktuj się <span class="ml-6 text-signal">→</span>
-          </button>
+          <div class="flex items-center gap-3">
+            <button
+              id="contactBtn"
+              type="button"
+              aria-label="Otwórz formularz kontaktowy"
+              class="flex-1 border border-black/50 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
+            >
+              Skontaktuj się <span class="ml-6 text-signal">→</span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -385,16 +405,36 @@
         <a
           href="#home"
           class="flex items-center"
-          aria-label="KZ Autoservis — strona główna"
+          aria-label="KZ Autoserwis — strona główna"
           ><img
             class="brand-logo brand-logo-footer !h-12"
             src="assets/logo.png"
-            alt="KZ Autoservis"
+            alt="KZ Autoserwis"
             loading="lazy"
         /></a>
-        <p class="text-[10px] uppercase tracking-[.15em] text-white/60">
-          © 2026 KZ Autoservis. Wszystkie prawa zastrzeżone.
-        </p>
+        <div class="flex flex-col items-center gap-4 sm:items-end">
+          <a
+            href="https://www.facebook.com/profile.php?id=61590144100994"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Odwiedź KZ Autoserwis na Facebooku (otwiera się w nowej karcie)"
+            class="group grid h-10 w-10 place-items-center border border-white/40 transition hover:border-signal hover:bg-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 fill-white"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44c-.31-.04-1.37-.13-2.61-.13-2.59 0-4.36 1.58-4.36 4.48V9.5H7.1V13h2.93v9h3.47Z"
+              />
+            </svg>
+          </a>
+          <p class="text-[10px] uppercase tracking-[.15em] text-white/60">
+            © <time id="copyrightYear"></time> KZ Autoserwis. Wszystkie prawa
+            zastrzeżone.
+          </p>
+        </div>
       </div>
     </footer>
 
