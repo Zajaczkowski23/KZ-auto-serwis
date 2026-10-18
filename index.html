@@ -55,11 +55,10 @@
           <a class="nav-link" href="#services">Usługi</a
           ><a class="nav-link" href="#about">O nas</a
           ><a class="nav-link" href="#work">Realizacje</a
-          ><a class="nav-link" href="#contact">Kontakt</a>
-          <a
-            href="#contact"
+          ><a
             class="border border-signal bg-signal px-7 py-3 text-white transition hover:border-white hover:bg-white hover:text-black"
-            >Napisz</a
+            href="kontakt/"
+            >Kontakt</a
           >
         </div>
         <button
@@ -81,7 +80,7 @@
           class="flex flex-col gap-5 text-sm font-semibold uppercase tracking-[.18em]"
         >
           <a href="#services">Usługi</a><a href="#about">O nas</a
-          ><a href="#work">Realizacje</a><a href="#contact">Kontakt</a>
+          ><a href="#work">Realizacje</a><a href="kontakt/">Kontakt</a>
         </div>
       </div>
       <div
@@ -143,16 +142,16 @@
             <div
               class="mt-7 max-w-lg divide-y divide-black/20 border-b border-black/20"
             >
-              <a class="service-row" href="#contact"
+              <a class="service-row" href="kontakt/"
                 ><b>01</b><span>Diagnostyka komputerowa</span><i>→</i></a
               >
-              <a class="service-row" href="#contact"
+              <a class="service-row" href="kontakt/"
                 ><b>02</b><span>Mechanika pojazdowa</span><i>→</i></a
               >
-              <a class="service-row" href="#contact"
+              <a class="service-row" href="kontakt/"
                 ><b>03</b><span>Silniki i rozrządy</span><i>→</i></a
               >
-              <a class="service-row" href="#contact"
+              <a class="service-row" href="kontakt/"
                 ><b>04</b><span>Serwis aut premium</span><i>→</i></a
               >
             </div>
@@ -367,35 +366,6 @@
           </div>
         </div>
       </section>
-
-      <section
-        id="contact"
-        class="contact-bg border-t border-black/10 px-6 py-20 lg:px-12 lg:py-28"
-      >
-        <div
-          class="mx-auto grid max-w-[1280px] items-center gap-10 lg:grid-cols-[.65fr_.55fr_.8fr]"
-        >
-          <h2
-            class="font-display text-5xl font-bold uppercase leading-[.92] lg:text-6xl"
-          >
-            Porozmawiajmy<br />o twoim aucie
-          </h2>
-          <p class="max-w-xs text-sm leading-6 text-black/70">
-            Chętnie poznamy jego historię i podpowiemy najlepsze rozwiązanie.
-          </p>
-
-          <div class="flex items-center gap-3">
-            <button
-              id="contactBtn"
-              type="button"
-              aria-label="Otwórz formularz kontaktowy"
-              class="flex-1 border border-black/50 py-4 text-xs font-bold uppercase tracking-[.16em] transition hover:border-signal hover:bg-signal hover:text-white"
-            >
-              Skontaktuj się <span class="ml-6 text-signal">→</span>
-            </button>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="bg-black px-6 py-8 text-white">
@@ -458,57 +428,6 @@
         alt="Powiększona realizacja"
         loading="lazy"
       />
-    </div>
-    <div
-      id="contactModal"
-      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-5"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="contactTitle"
-    >
-      <div class="relative w-full max-w-xl bg-paper p-7 sm:p-10">
-        <button
-          type="button"
-          class="absolute right-5 top-4 text-3xl"
-          data-close
-          aria-label="Zamknij formularz kontaktowy"
-        >
-          ×</button
-        ><span class="eyebrow">Kontakt</span>
-        <h2 id="contactTitle" class="font-display text-5xl font-bold uppercase">
-          Umów wizytę
-        </h2>
-        <form id="contactForm" class="mt-7 grid gap-4">
-          <input
-            required
-            class="field"
-            type="text"
-            placeholder="Imię i nazwisko"
-          /><input
-            required
-            class="field"
-            type="tel"
-            placeholder="Numer telefonu"
-          /><textarea
-            required
-            class="field min-h-32 resize-none"
-            placeholder="Opowiedz krótko, czego potrzebuje Twoje auto"
-          ></textarea
-          ><button
-            type="submit"
-            aria-label="Wyślij zgłoszenie kontaktowe"
-            class="bg-ink px-6 py-4 text-xs font-bold uppercase tracking-[.18em] text-white hover:bg-signal"
-          >
-            Wyślij zgłoszenie
-          </button>
-          <p
-            id="formStatus"
-            class="hidden text-sm font-semibold text-green-700"
-          >
-            Dziękujemy! Skontaktujemy się z Tobą.
-          </p>
-        </form>
-      </div>
     </div>
     <script src="script.js"></script>
   </body>

@@ -144,7 +144,8 @@
   padding: 14px 16px;
   outline: none;
 }
-.field:focus {
+.field:focus,
+.field[aria-invalid="true"] {
   border-color: var(--red);
 }
 body.modal-open {

@@ -34,10 +34,12 @@ function updateComparison() {
   afterLayer.style.width = `${100 - range.value}%`;
   compareLine.style.left = `${range.value}%`;
 }
-range.addEventListener("input", updateComparison);
-window.addEventListener("resize", resizeComparison);
-resizeComparison();
-updateComparison();
+if (range) {
+  range.addEventListener("input", updateComparison);
+  window.addEventListener("resize", resizeComparison);
+  resizeComparison();
+  updateComparison();
+}
 
 const lightbox = document.querySelector("#lightbox");
 const lightboxImg = document.querySelector("#lightboxImg");
@@ -50,12 +52,6 @@ document.querySelectorAll(".project").forEach((project) =>
   }),
 );
 
-const contactModal = document.querySelector("#contactModal");
-document.querySelector("#contactBtn").addEventListener("click", () => {
-  contactModal.classList.remove("hidden");
-  contactModal.classList.add("flex");
-  document.body.classList.add("modal-open");
-});
 function closeModal(modal) {
   modal.classList.add("hidden");
   modal.classList.remove("flex");
@@ -68,7 +64,7 @@ document
       closeModal(button.closest('[role="dialog"]')),
     ),
   );
-[lightbox, contactModal].forEach((modal) =>
+document.querySelectorAll('[role="dialog"]').forEach((modal) =>
   modal.addEventListener("click", (event) => {
     if (event.target === modal) closeModal(modal);
   }),
@@ -77,12 +73,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape")
     document.querySelectorAll('[role="dialog"].flex').forEach(closeModal);
 });
-document.querySelector("#contactForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-  document.querySelector("#formStatus").classList.remove("hidden");
-  event.currentTarget.reset();
-});
-
 const revealItems = document.querySelectorAll("section > div");
 const observer = new IntersectionObserver(
   (entries) =>
