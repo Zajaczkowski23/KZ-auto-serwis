@@ -10,18 +10,56 @@ updateCopyrightYear();
 
 const menuBtn = document.querySelector("#menuBtn");
 const mobileMenu = document.querySelector("#mobileMenu");
+const menuCloseBtn = document.querySelector("#menuCloseBtn");
+const desktopMenu = window.matchMedia("(min-width: 768px)");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let menuScrollY = 0;
+let menuCloseTimer;
+
+function closeMobileMenu(immediate = false) {
+  mobileMenu.classList.remove("is-open");
+  clearTimeout(menuCloseTimer);
+  if (immediate || reducedMotion.matches) {
+    finishClosingMobileMenu();
+  } else {
+    menuCloseTimer = setTimeout(finishClosingMobileMenu, 220);
+  }
+}
+
 menuBtn.addEventListener("click", () => {
-  const open = mobileMenu.classList.toggle("hidden");
-  menuBtn.setAttribute("aria-expanded", String(!open));
-  menuBtn.setAttribute("aria-label", open ? "Otwórz menu" : "Zamknij menu");
+  if (desktopMenu.matches || mobileMenu.open) return;
+  clearTimeout(menuCloseTimer);
+  menuScrollY = window.scrollY;
+  document.body.style.setProperty("--menu-scroll-top", `-${menuScrollY}px`);
+  document.body.classList.add("menu-open");
+  mobileMenu.showModal();
+  // Flush the closed position so the panel slides in on its first opening too.
+  mobileMenu.getBoundingClientRect();
+  mobileMenu.classList.add("is-open");
+  menuBtn.setAttribute("aria-expanded", "true");
 });
-mobileMenu.querySelectorAll("a").forEach((link) =>
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.setAttribute("aria-label", "Otwórz menu");
-  }),
-);
+menuCloseBtn.addEventListener("click", () => closeMobileMenu());
+mobileMenu.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  closeMobileMenu();
+});
+function finishClosingMobileMenu() {
+  mobileMenu.close();
+  clearTimeout(menuCloseTimer);
+  mobileMenu.classList.remove("is-open");
+  document.body.classList.remove("menu-open");
+  document.body.style.removeProperty("--menu-scroll-top");
+  window.scrollTo({ top: menuScrollY, behavior: "instant" });
+  menuBtn.setAttribute("aria-expanded", "false");
+}
+mobileMenu
+  .querySelectorAll("a")
+  .forEach((link) =>
+    link.addEventListener("click", () => closeMobileMenu(true)),
+  );
+desktopMenu.addEventListener("change", () => {
+  if (desktopMenu.matches && mobileMenu.open) closeMobileMenu(true);
+});
 
 const range = document.querySelector("#compareRange");
 const afterLayer = document.querySelector("#afterLayer");

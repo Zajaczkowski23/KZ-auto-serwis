@@ -64,21 +64,67 @@
           aria-controls="mobileMenu"
           aria-label="Otwórz menu"
         >
-          <span class="text-xl">☰</span>
+          <svg
+            aria-hidden="true"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </nav>
-      <div
-        id="mobileMenu"
-        class="absolute inset-x-5 top-20 z-30 hidden border border-white/20 bg-black/95 p-6 md:hidden"
-      >
-        <div
-          class="flex flex-col gap-5 text-sm font-semibold uppercase tracking-[.18em]"
-        >
-          <a href="../#services">Usługi</a><a href="../#about">O nas</a
-          ><a href="../#work">Realizacje</a
-          ><a href="./" aria-current="page">Kontakt</a>
+      <dialog id="mobileMenu" class="mobile-menu" aria-label="Menu główne">
+        <div class="mobile-menu-header">
+          <button
+            id="menuCloseBtn"
+            class="mobile-menu-close"
+            type="button"
+            aria-label="Zamknij menu"
+            autofocus
+          >
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
-      </div>
+        <div class="mobile-menu-content">
+          <div class="mobile-menu-footer">
+            <img
+              class="brand-logo mobile-menu-logo"
+              src="../assets/logo.png"
+              alt="KZ Autoserwis"
+            />
+          </div>
+          <nav class="mobile-menu-links" aria-label="Nawigacja mobilna">
+            <a href="../#services"><span>Usługi</span></a>
+            <a href="../#about"><span>O nas</span></a>
+            <a href="../#work"><span>Realizacje</span></a>
+            <a href="./" aria-current="page"><span>Kontakt</span></a>
+          </nav>
+          <a
+            class="mobile-menu-facebook"
+            href="https://www.facebook.com/profile.php?id=61590144100994"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Odwiedź KZ Autoserwis na Facebooku (otwiera się w nowej karcie)"
+          >
+            <svg
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44c-.31-.04-1.37-.13-2.61-.13-2.59 0-4.36 1.58-4.36 4.48V9.5H7.1V13h2.93v9h3.47Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </dialog>
     </header>
 
     <main>
