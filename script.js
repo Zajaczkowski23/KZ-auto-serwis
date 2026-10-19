@@ -13,6 +13,54 @@ const mobileMenu = document.querySelector("#mobileMenu");
 const menuCloseBtn = document.querySelector("#menuCloseBtn");
 const desktopMenu = window.matchMedia("(min-width: 768px)");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+document.querySelectorAll(".service").forEach((service) => {
+  const summary = service.querySelector("summary");
+  const description = service.querySelector(".service-description");
+  let expanded = service.open;
+  let heightAnimation;
+  let fadeAnimation;
+
+  summary.addEventListener("click", (event) => {
+    event.preventDefault();
+    const startHeight = service.getBoundingClientRect().height;
+    const startOpacity = getComputedStyle(description).opacity;
+    heightAnimation?.cancel();
+    fadeAnimation?.cancel();
+    expanded = !expanded;
+    summary.setAttribute("aria-expanded", String(expanded));
+
+    if (reducedMotion.matches || !service.animate) {
+      service.open = expanded;
+      service.style.overflow = "";
+      return;
+    }
+
+    const wasOpen = service.open;
+    service.open = true;
+    const endHeight = expanded
+      ? service.getBoundingClientRect().height
+      : summary.getBoundingClientRect().height;
+    const timing = { duration: 250, easing: "ease" };
+
+    service.style.overflow = "hidden";
+    fadeAnimation = description.animate(
+      [{ opacity: wasOpen ? startOpacity : 0 }, { opacity: expanded ? 1 : 0 }],
+      timing,
+    );
+    heightAnimation = service.animate(
+      [{ height: `${startHeight}px` }, { height: `${endHeight}px` }],
+      timing,
+    );
+    heightAnimation.onfinish = () => {
+      service.open = expanded;
+      service.style.overflow = "";
+      heightAnimation = null;
+      fadeAnimation = null;
+    };
+  });
+});
+
 let menuScrollY = 0;
 let menuCloseTimer;
 

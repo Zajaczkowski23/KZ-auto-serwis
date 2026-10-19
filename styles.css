@@ -73,18 +73,43 @@ body {
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+}
+.service-row::-webkit-details-marker {
+  display: none;
+}
+.service-row:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
 }
 .service-row b {
   color: var(--red);
 }
 .service-row i {
-  font-size: 18px;
-  font-style: normal;
-  transition: transform 0.2s;
+  justify-self: center;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition:
+    transform 250ms ease,
+    color 250ms ease;
 }
-.service-row:hover i {
-  transform: translateX(5px);
+.service[open] .service-row:not([aria-expanded="false"]) i {
+  transform: translateY(2px) rotate(225deg);
+}
+.service-row:hover i,
+.service[open] .service-row i {
   color: var(--red);
+}
+.service-description {
+  margin: 0;
+  padding: 0 30px 20px 42px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b4b4b;
 }
 .outline-word {
   position: absolute;
@@ -291,7 +316,8 @@ body.menu-open {
   overflow: hidden;
 }
 @media (prefers-reduced-motion: reduce) {
-  .mobile-menu {
+  .mobile-menu,
+  .service-row i {
     transition: none;
   }
 }
