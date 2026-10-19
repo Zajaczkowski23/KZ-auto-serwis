@@ -1,5 +1,19 @@
 :root {
   --red: #e1262d;
+  --site-nav-height: 60px;
+}
+html {
+  scroll-padding-top: calc(var(--site-nav-height) + 20px);
+}
+body {
+  padding-top: var(--site-nav-height);
+}
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  height: var(--site-nav-height);
+  background: #000;
 }
 .hero {
   background-image: url("assets/att.Phy7467yCx2UqLFk6_84GMagGdOxHnmuhULseUc9rrY.jpeg");
