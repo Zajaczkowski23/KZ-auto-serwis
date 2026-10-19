@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=20261019" />
     <style>
       :root {
         --red: #c71920;
@@ -30,7 +30,7 @@
   <body class="bg-paper text-ink antialiased">
     <header class="relative bg-black text-white">
       <nav
-        class="relative z-20 mx-auto flex items-center justify-between border-white/15 bg-black/45 px-6 py-2 shadow-lg lg:px-12"
+        class="site-nav mx-auto flex items-center justify-between border-white/15 px-6 py-2 shadow-lg lg:px-12"
       >
         <a
           href="../#home"
@@ -249,8 +249,8 @@
       <hr class="w-full border-0 border-t border-black/20" />
 
       <section class="px-6 py-12" aria-labelledby="enquiryTitle">
-        <div class="mx-auto max-w-[1280px]">
-          <div class="mx-auto w-full max-w-3xl">
+        <div class="mx-auto grid max-w-[1280px] items-stretch gap-8 lg:grid-cols-2">
+          <div class="w-full min-w-0 lg:order-2">
             <div
               class="w-full min-w-0 rounded border border-black/15 bg-white p-6 sm:p-10"
             >
@@ -356,6 +356,34 @@
                 </button>
               </form>
             </div>
+          </div>
+          <div
+            class="flex min-w-0 flex-col overflow-hidden rounded border border-black/15 bg-white lg:order-1"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-4 p-5 sm:p-6"
+            >
+              <h2 class="font-display text-3xl font-bold uppercase">
+                Jak do nas dojechać
+              </h2>
+              <a
+                href="https://maps.app.goo.gl/sFkTJbBUEnfWMTZt6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold text-signal underline underline-offset-4 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Wyznacz trasę w Google Maps</a
+              >
+            </div>
+            <iframe
+              title="Mapa dojazdu do KZ Autoserwis — Maksymiliana Gierymskiego 2, Piła"
+              src="https://www.google.com/maps?cid=1527795451472428095&amp;output=embed"
+              width="100%"
+              height="400"
+              class="block min-h-[400px] w-full flex-1 border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
