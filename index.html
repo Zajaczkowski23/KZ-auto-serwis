@@ -417,11 +417,11 @@
 
     <footer class="bg-black px-6 py-8 text-white">
       <div
-        class="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-5 text-center sm:flex-row"
+        class="mx-auto grid max-w-[1280px] items-start gap-10 text-center md:grid-cols-2 lg:grid-cols-[1fr_1fr_2fr_1fr] md:text-left"
       >
         <a
           href="#home"
-          class="flex items-center"
+          class="flex items-center justify-center md:justify-start"
           aria-label="KZ Autoserwis — strona główna"
           ><img
             class="brand-logo brand-logo-footer !h-12"
@@ -429,7 +429,26 @@
             alt="KZ Autoserwis"
             loading="lazy"
         /></a>
-        <div class="flex flex-col items-center gap-4 sm:items-end">
+        <nav aria-label="Nawigacja w stopce">
+          <h2 class="font-display text-2xl font-bold uppercase">Nawigacja</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-white/75">
+            <li><a href="#home" class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">Strona główna</a></li>
+            <li><a href="#services" class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">Usługi</a></li>
+            <li><a href="#about" class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">O nas</a></li>
+            <li><a href="#work" class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">Realizacje</a></li>
+            <li><a href="kontakt/" class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="min-w-0">
+          <h2 class="font-display text-2xl font-bold uppercase">Kontakt</h2>
+          <address class="mt-4 space-y-3 text-sm not-italic leading-6 text-white/75">
+            <p>Numer telefonu: <a href="tel:790201658" class="text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">790 201 658</a></p>
+            <p>Email: <a href="mailto:Kzautoserwis@gmail.com" class="text-white [overflow-wrap:anywhere] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal">Kzautoserwis@gmail.com</a></p>
+            <p>Adres: Maksymiliana Gierymskiego 2, 64-920 Piła</p>
+          </address>
+        </div>
+        <div class="flex min-w-0 flex-col items-center gap-4 md:items-start">
+          <h2 class="font-display text-2xl font-bold uppercase">Zaobserwuj nas!</h2>
           <a
             href="https://www.facebook.com/profile.php?id=61590144100994"
             target="_blank"
@@ -447,11 +466,11 @@
               />
             </svg>
           </a>
-          <p class="text-[10px] uppercase tracking-[.15em] text-white/60">
-            © <time id="copyrightYear"></time> KZ Autoserwis. Wszystkie prawa
-            zastrzeżone.
-          </p>
+
         </div>
+        <p class="border-t border-white/15 pt-6 text-[10px] uppercase tracking-[.15em] text-white/60 md:col-span-2 lg:col-span-4">
+          © <time id="copyrightYear"></time> KZ Autoserwis. Wszystkie prawa zastrzeżone.
+        </p>
       </div>
     </footer>
 
