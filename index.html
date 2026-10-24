@@ -11,7 +11,7 @@
     />
     <meta
       name="description"
-      content="KZ Autoserwis — profesjonalna mechanika, diagnostyka i serwis samochodów premium."
+      content="KZ Autoserwis - profesjonalna mechanika, diagnostyka i serwis samochodów premium."
     />
     <title>Strona główna - KZ Autoserwis</title>
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png" />
@@ -24,12 +24,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=20261019" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKNDR5SYXM"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GKNDR5SYXM"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GKNDR5SYXM');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GKNDR5SYXM");
     </script>
     <style>
       :root {
@@ -54,7 +59,7 @@
         <a
           href="#home"
           class="flex items-center"
-          aria-label="KZ Autoserwis — strona główna"
+          aria-label="KZ Autoserwis - strona główna"
         >
           <img
             class="brand-logo brand-logo-header !h-10"
@@ -66,7 +71,7 @@
           class="hidden items-center gap-10 text-[11px] font-semibold uppercase tracking-[.2em] md:flex"
         >
           <a class="nav-link" href="#services">Usługi</a
-          ><a class="nav-link" href="#about">O nas</a
+          ><a class="nav-link" href="o-nas/">O nas</a
           ><a class="nav-link" href="#work">Realizacje</a
           ><a
             class="border border-signal bg-signal px-7 py-3 text-white transition hover:border-white hover:bg-white hover:text-black"
@@ -118,7 +123,7 @@
           </div>
           <nav class="mobile-menu-links" aria-label="Nawigacja mobilna">
             <a href="#services"><span>Usługi</span></a>
-            <a href="#about"><span>O nas</span></a>
+            <a href="o-nas/"><span>O nas</span></a>
             <a href="#work"><span>Realizacje</span></a>
             <a href="kontakt/"><span>Kontakt</span></a>
           </nav>
@@ -307,11 +312,18 @@
               </h2>
               <span class="red-rule"></span>
             </div>
-            <p class="max-w-md self-center text-base leading-7 text-black/70">
-              Samochody fascynują nas od zawsze. Dlatego do każdego zlecenia
-              podchodzimy indywidualnie — od pierwszej diagnozy po ostatnią
-              jazdę próbną.
-            </p>
+            <div class="self-center">
+              <p class="max-w-md text-base leading-7 text-black/70">
+                Samochody fascynują nas od zawsze. Dlatego do każdego zlecenia
+                podchodzimy indywidualnie - od pierwszej diagnozy po ostatnią
+                jazdę próbną.
+              </p>
+              <a
+                href="o-nas/"
+                class="mt-6 inline-flex items-center gap-6 text-xs font-bold uppercase tracking-[.16em] text-signal hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Poznaj nas <span aria-hidden="true">→</span></a
+              >
+            </div>
           </div>
           <div class="mt-10 grid gap-3 md:grid-cols-[.85fr_1.15fr]">
             <img
@@ -321,7 +333,7 @@
               loading="lazy"
             /><img
               class="h-80 w-full object-cover"
-              src="assets/IMG_3044.jpeg"
+              src="assets/IMG_4397.jpeg"
               alt="Naprawa rozrządu silnika"
               loading="lazy"
             />
@@ -490,7 +502,7 @@
         <a
           href="#home"
           class="flex items-center justify-center md:justify-start"
-          aria-label="KZ Autoserwis — strona główna"
+          aria-label="KZ Autoserwis - strona główna"
           ><img
             class="brand-logo brand-logo-footer !h-12"
             src="assets/logo.png"
@@ -516,7 +528,7 @@
             </li>
             <li>
               <a
-                href="#about"
+                href="o-nas/"
                 class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
                 >O nas</a
               >

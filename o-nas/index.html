@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Poznaj KZ Autoserwis w Pile. Wiedza, dokładność i indywidualne podejście do Twojego auta. Dowiedz się, jak pracujemy i dlaczego warto nam zaufać."
+    />
+    <title>O nas - KZ Autoserwis</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=20261019" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GKNDR5SYXM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GKNDR5SYXM");
+    </script>
+    <style>
+      :root {
+        --red: #c71920;
+      }
+    </style>
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <header class="relative bg-black text-white">
+      <nav
+        class="site-nav mx-auto flex items-center justify-between border-white/15 px-6 py-2 shadow-lg lg:px-12"
+      >
+        <a
+          href="../#home"
+          class="flex items-center"
+          aria-label="KZ Autoserwis - strona główna"
+        >
+          <img
+            class="brand-logo brand-logo-header !h-10"
+            src="../assets/logo.png"
+            alt="KZ Autoserwis"
+          />
+        </a>
+        <div
+          class="hidden items-center gap-10 text-[11px] font-semibold uppercase tracking-[.2em] md:flex"
+        >
+          <a class="nav-link" href="../#services">Usługi</a
+          ><a class="nav-link" href="./" aria-current="page">O nas</a
+          ><a class="nav-link" href="../#work">Realizacje</a
+          ><a
+            class="border border-signal bg-signal px-7 py-3 text-white transition hover:border-white hover:bg-white hover:text-black"
+            href="../kontakt/"
+            >Kontakt</a
+          >
+        </div>
+        <button
+          id="menuBtn"
+          type="button"
+          class="grid h-11 w-11 place-items-center border border-white/40 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Otwórz menu"
+        >
+          <svg
+            aria-hidden="true"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+      <dialog id="mobileMenu" class="mobile-menu" aria-label="Menu główne">
+        <div class="mobile-menu-header">
+          <button
+            id="menuCloseBtn"
+            class="mobile-menu-close"
+            type="button"
+            aria-label="Zamknij menu"
+            autofocus
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="mobile-menu-content">
+          <div class="mobile-menu-footer">
+            <img
+              class="brand-logo mobile-menu-logo"
+              src="../assets/logo.png"
+              alt="KZ Autoserwis"
+            />
+          </div>
+          <nav class="mobile-menu-links" aria-label="Nawigacja mobilna">
+            <a href="../#services"><span>Usługi</span></a>
+            <a href="./" aria-current="page"><span>O nas</span></a>
+            <a href="../#work"><span>Realizacje</span></a>
+            <a href="../kontakt/"><span>Kontakt</span></a>
+          </nav>
+          <a
+            class="mobile-menu-facebook"
+            href="https://www.facebook.com/profile.php?id=61590144100994"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Odwiedź KZ Autoserwis na Facebooku (otwiera się w nowej karcie)"
+          >
+            <svg
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44c-.31-.04-1.37-.13-2.61-.13-2.59 0-4.36 1.58-4.36 4.48V9.5H7.1V13h2.93v9h3.47Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </dialog>
+    </header>
+
+    <main>
+      <section
+        class="px-6 py-14 lg:px-12 lg:py-24"
+        aria-labelledby="aboutTitle"
+      >
+        <div class="mx-auto max-w-[1280px]">
+          <a
+            href="../"
+            class="text-xs font-semibold uppercase tracking-[.16em] hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+            >← Strona główna</a
+          >
+          <div class="mt-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div class="min-w-0">
+              <span class="eyebrow">O nas / KZ Autoserwis / Piła</span>
+              <h1
+                id="aboutTitle"
+                class="font-display text-5xl font-bold uppercase leading-[.93] sm:text-6xl xl:text-7xl"
+              >
+                Każde auto<br />to osobna<br /><span class="text-signal"
+                  >historia.</span
+                >
+              </h1>
+              <span class="red-rule"></span>
+              <p class="max-w-md text-base leading-7 text-black/70">
+                Samochody fascynują nas od zawsze. W KZ Autoserwis tę pasję
+                przekładamy na uważną pracę przy Twoim aucie. Słuchamy,
+                sprawdzamy i szukamy przyczyny problemu.
+              </p>
+              <p class="mt-4 max-w-md text-base leading-7 text-black/70">
+                Wyjaśniamy, co wymaga uwagi, i omawiamy z Tobą zakres naprawy.
+                Chcemy, żebyś rozumiał, co dzieje się z Twoim samochodem.
+              </p>
+            </div>
+            <figure class="min-w-0">
+              <img
+                src="../assets/IMG_4348.jpeg"
+                alt="Praca przy silniku w warsztacie KZ Autoserwis"
+                class="h-80 w-full object-cover sm:h-[480px]"
+                fetchpriority="high"
+              />
+              <figcaption
+                class="mt-3 text-xs uppercase tracking-[.14em] text-black/60"
+              >
+                Wiedza i dokładność w codziennej pracy.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-[#0b0c0d] px-6 py-20 text-white lg:px-12 lg:py-24"
+        aria-labelledby="valuesTitle"
+      >
+        <div class="mx-auto max-w-[1280px]">
+          <span class="eyebrow !text-[#f0444b]">Nasze wartości</span>
+          <h2
+            id="valuesTitle"
+            class="max-w-2xl font-display text-5xl font-bold uppercase leading-[.93] lg:text-6xl"
+          >
+            Dlaczego warto<br />nam zaufać?
+          </h2>
+          <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            <article class="border-t border-white/25 pt-6">
+              <span
+                class="text-xs font-semibold tracking-[.2em] text-[#f0444b]"
+                aria-hidden="true"
+                >01</span
+              >
+              <h3 class="mt-5 font-display text-3xl font-bold uppercase">
+                Wiedza
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-white/75">
+                Zaczynamy od rozmowy i diagnostyki. Łączymy informacje od Ciebie
+                ze sprawdzeniem auta, żeby zrozumieć przyczynę usterki i
+                zaproponować odpowiedni zakres prac.
+              </p>
+            </article>
+            <article class="border-t border-white/25 pt-6">
+              <span
+                class="text-xs font-semibold tracking-[.2em] text-[#f0444b]"
+                aria-hidden="true"
+                >02</span
+              >
+              <h3 class="mt-5 font-display text-3xl font-bold uppercase">
+                Dokładność
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-white/75">
+                Liczą się szczegóły: od pierwszego sprawdzenia po kontrolę
+                wykonanej naprawy. Do każdego etapu podchodzimy z uwagą i
+                szacunkiem do Twojego samochodu.
+              </p>
+            </article>
+            <article class="border-t border-white/25 pt-6">
+              <span
+                class="text-xs font-semibold tracking-[.2em] text-[#f0444b]"
+                aria-hidden="true"
+                >03</span
+              >
+              <h3 class="mt-5 font-display text-3xl font-bold uppercase">
+                Indywidualne podejście
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-white/75">
+                Każde auto ma inną historię, a każdy kierowca inne potrzeby.
+                Słuchamy Twoich uwag, wyjaśniamy ustalenia i omawiamy z Tobą
+                zakres naprawy.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="px-6 py-20 lg:px-12 lg:py-24"
+        aria-labelledby="contactTitle"
+      >
+        <div
+          class="mx-auto grid max-w-[1280px] items-center gap-10 lg:grid-cols-2 lg:gap-16"
+        >
+          <img
+            src="../assets/IMG_4397.jpeg"
+            alt="Szczegóły pracy przy rozrządzie silnika w KZ Autoserwis"
+            class="h-80 w-full object-cover sm:h-[420px]"
+            loading="lazy"
+          />
+          <div class="min-w-0">
+            <span class="eyebrow">Zacznijmy od rozmowy</span>
+            <h2
+              id="contactTitle"
+              class="font-display text-5xl font-bold uppercase leading-[.93] lg:text-6xl"
+            >
+              Poznajmy historię<br />Twojego auta.
+            </h2>
+            <span class="red-rule"></span>
+            <p class="max-w-md text-base leading-7 text-black/70">
+              Coś Cię niepokoi? Planujesz serwis? Opowiedz nam, czego
+              potrzebujesz. Porozmawiamy o Twoim samochodzie i ustalimy kolejny
+              krok.
+            </p>
+            <a
+              href="../kontakt/"
+              class="mt-8 inline-flex items-center gap-6 bg-signal px-6 py-4 text-xs font-bold uppercase tracking-[.16em] text-white transition hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+              >Skontaktuj się z nami <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black px-6 py-8 text-white">
+      <div
+        class="mx-auto grid max-w-[1280px] items-start gap-10 text-center md:grid-cols-2 lg:grid-cols-[1fr_1fr_2fr_1fr] md:text-left"
+      >
+        <a
+          href="../#home"
+          class="flex items-center justify-center md:justify-start"
+          aria-label="KZ Autoserwis - strona główna"
+          ><img
+            class="brand-logo brand-logo-footer !h-12"
+            src="../assets/logo.png"
+            alt="KZ Autoserwis"
+            loading="lazy"
+        /></a>
+        <nav aria-label="Nawigacja w stopce">
+          <h2 class="font-display text-2xl font-bold uppercase">Nawigacja</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-white/75">
+            <li>
+              <a
+                href="../#home"
+                class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Strona główna</a
+              >
+            </li>
+            <li>
+              <a
+                href="../#services"
+                class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Usługi</a
+              >
+            </li>
+            <li>
+              <a
+                href="./"
+                aria-current="page"
+                class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >O nas</a
+              >
+            </li>
+            <li>
+              <a
+                href="../#work"
+                class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Realizacje</a
+              >
+            </li>
+            <li>
+              <a
+                href="../kontakt/"
+                class="hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="min-w-0">
+          <h2 class="font-display text-2xl font-bold uppercase">Kontakt</h2>
+          <address
+            class="mt-4 space-y-3 text-sm not-italic leading-6 text-white/75"
+          >
+            <p>
+              Numer telefonu:
+              <a
+                href="tel:790201658"
+                class="text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >790 201 658</a
+              >
+            </p>
+            <p>
+              Email:
+              <a
+                href="mailto:Kzautoserwis@gmail.com"
+                class="text-white [overflow-wrap:anywhere] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                >Kzautoserwis@gmail.com</a
+              >
+            </p>
+            <p>Adres: Maksymiliana Gierymskiego 2, 64-920 Piła</p>
+          </address>
+        </div>
+        <div class="flex min-w-0 flex-col items-center gap-4 md:items-start">
+          <h2 class="font-display text-2xl font-bold uppercase">
+            Zaobserwuj nas!
+          </h2>
+          <a
+            href="https://www.facebook.com/profile.php?id=61590144100994"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Odwiedź KZ Autoserwis na Facebooku (otwiera się w nowej karcie)"
+            class="group grid h-10 w-10 place-items-center border border-white/40 transition hover:border-signal hover:bg-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-5 w-5 fill-white"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44c-.31-.04-1.37-.13-2.61-.13-2.59 0-4.36 1.58-4.36 4.48V9.5H7.1V13h2.93v9h3.47Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p
+          class="border-t border-white/15 pt-6 text-[10px] uppercase tracking-[.15em] text-white/60 md:col-span-2 lg:col-span-4"
+        >
+          © <time id="copyrightYear"></time> KZ Autoserwis. Wszystkie prawa
+          zastrzeżone.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
